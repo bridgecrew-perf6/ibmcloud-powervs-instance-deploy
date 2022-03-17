@@ -39,5 +39,11 @@ variable "ssh_key_name" {
 }
 variable "network_name" {
   type        = string
-  description = "The network ID or name to assign to use when creating the instance"
+  description = "The network ID or name to assign to the instance"
+}
+
+variable "region" {
+  type        = string
+  default     = "dal"
+  description = "The region that belongs to the PowerVS instance"
 }
