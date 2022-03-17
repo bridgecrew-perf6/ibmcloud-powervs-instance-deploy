@@ -1,7 +1,7 @@
 data "ibm_pi_catalog_images" "catalog_images" {
   sap                  = true
   vtl                  = true
-  pi_cloud_instance_id = var.pid
+  pi_cloud_instance_id = local.pid
 }
 
 locals {
@@ -9,17 +9,17 @@ locals {
 }
 
 data "ibm_pi_key" "key" {
-  pi_cloud_instance_id = var.pid
+  pi_cloud_instance_id = local.pid
   pi_key_name          = var.ssh_key_name
 }
 
 data "ibm_pi_network" "power_network" {
-  pi_cloud_instance_id = var.pid
+  pi_cloud_instance_id = local.pid
   pi_network_name      = var.network_name
 }
 
 resource "ibm_pi_instance" "instance" {
-  pi_cloud_instance_id = var.pid
+  pi_cloud_instance_id = local.pid
   pi_memory            = var.memory
   pi_processors        = var.processors
   pi_instance_name     = var.instance_name
