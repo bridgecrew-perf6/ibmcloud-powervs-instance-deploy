@@ -4,7 +4,7 @@ variable "crn" {
 }
 variable "stock_image_name" {
   type        = string
-  default     = "Linux-CentOS-8-3"
+  default     = "7300-00-01"
   description = "The name of the stock image"
 }
 
