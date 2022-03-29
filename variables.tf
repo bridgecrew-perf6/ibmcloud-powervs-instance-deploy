@@ -4,7 +4,7 @@ variable "crn" {
 }
 variable "stock_image_name" {
   type        = string
-  default     = "7300-00-01"
+  default     = "7200-05-01"
   description = "The name of the stock image"
 }
 
